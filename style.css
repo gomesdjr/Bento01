@@ -22,7 +22,7 @@ body {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: relative;
+    position: relative; /* referência para absolute */
     text-align: center;
     overflow: hidden;
     z-index: 2;
@@ -85,7 +85,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2px; /* Subiu os sapatinhos junto */
+    margin-bottom: 350px; /* Subiu os sapatinhos junto */
     font-size: 11px;
 }
 
@@ -104,12 +104,14 @@ body {
     margin-bottom: -10px;
 }
 
-/* Nuvem com botão - alinhada à esquerda */
+/* Nuvem com botão - posicionamento absoluto para subir */
 .nuvem-container {
-    position: relative;
-    margin-top: -30px; /* Nuvem mais pra cima */
+    position: absolute;
+    top: 680px; /* Ajuste a altura conforme necessário */
+    left: 10px;
+    width: 140px;
     text-align: left;
-    padding-left: 10px;
+    z-index: 2;
 }
 
 .nuvem-botao {
@@ -135,17 +137,21 @@ body {
     font-weight: 500;
     text-align: center;
     line-height: 1.2;
-    z-index: 2;
+    z-index: 3;
     white-space: nowrap;
 }
 
-/* Sugestão de presente - abaixo da nuvem */
+/* Sugestão de presente - abaixo da nuvem, também absoluta */
 .sugestao-presente {
-    position: relative;
-    text-align: left;
+    position: absolute;
+    top: 850px; /* Logo abaixo da nuvem - ajuste conforme queira */
+    left: 10px;
+    width: 140px;
     font-size: 10px;
-    margin-top: 0px; /* Texto de sugestão mais próximo da nuvem */
-    padding-left: 10px;
+    text-align: left;
+    z-index: 1;
+    padding-left: 0;
+    margin-top: 0;
 }
 
 .sugestao-presente h3 {
@@ -178,7 +184,7 @@ body {
     position: absolute;
     bottom: 30px; /* Presente subiu também */
     right: 80px;
-    width: 130px;
+    width: 100px;
     height: auto;
 }
 
