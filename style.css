@@ -189,7 +189,7 @@ body {
 }
 
 /* Responsividade para telas menores */
-@@media (max-width: 400px) {
+@media (max-width: 400px) {
     .nuvem-container,
     .sugestao-presente {
         position: static !important; /* Volta para fluxo normal */
