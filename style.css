@@ -189,17 +189,28 @@ body {
 }
 
 /* Responsividade para telas menores */
-@media (max-width: 360px) {
-    .urso-topo img { width: 230px; }
-    .titulo .nome { font-size: 30px; }
-    .nuvem-botao img { width: 120px; }
-    .nuvem-botao a { font-size: 9px; }
-    .sapatinhos img { width: 45px; }
-    .sugestao-presente { font-size: 9px; margin-top: 3px; }
-    .urso-baloes img:first-child {
-        width: 120px;
-        left: 15px;
-        position: relative;
+@@media (max-width: 400px) {
+    .nuvem-container,
+    .sugestao-presente {
+        position: static !important; /* Volta para fluxo normal */
+        margin-top: 10px; /* Espaçamento entre eles */
+        width: 100%; /* Ocupa toda a largura disponível */
+        padding-left: 0;
+        text-align: center; /* Centraliza o texto e botão */
     }
-    .presente-decorativo { width: 60px; }
+
+    .nuvem-botao img {
+        width: 120px; /* Ajusta o tamanho da nuvem */
+        height: auto;
+    }
+
+    .nuvem-botao a {
+        font-size: 10px; /* Texto menor para caber */
+        white-space: normal; /* Quebra de linha se precisar */
+    }
+
+    .sugestao-presente h3,
+    .sugestao-presente p {
+        font-size: 9px;
+    }
 }
