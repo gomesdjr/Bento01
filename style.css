@@ -85,7 +85,7 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 5px;
+    margin-bottom: 2px; /* Subiu os sapatinhos junto */
     font-size: 11px;
 }
 
@@ -94,16 +94,21 @@ body {
     text-align: center;
 }
 
+.sapatinhos {
+    margin-top: -10px; /* Sapatinhos subindo */
+}
+
 .sapatinhos img {
     width: 100px;
     height: auto;
+    margin-bottom: -10px;
 }
 
 /* Nuvem com botão - alinhada à esquerda */
 .nuvem-container {
     position: relative;
-    margin-top: 0px;
-    text-align: left;  /* Garante que a nuvem fique à esquerda */
+    margin-top: -30px; /* Nuvem mais pra cima */
+    text-align: left;
     padding-left: 10px;
 }
 
@@ -134,12 +139,12 @@ body {
     white-space: nowrap;
 }
 
-/* Sugestão de presente - abaixo da nuvem, também à esquerda */
+/* Sugestão de presente - abaixo da nuvem */
 .sugestao-presente {
     position: relative;
     text-align: left;
     font-size: 10px;
-    margin-top: 5px;
+    margin-top: 0px; /* Texto de sugestão mais próximo da nuvem */
     padding-left: 10px;
 }
 
@@ -158,20 +163,20 @@ body {
 /* Urso com balões - rodapé inferior direito */
 .secao-final {
     position: absolute;
-    bottom: 10px;
+    bottom: 40px; /* Urso com balões mais pra cima */
     right: 10px;
 }
 
 .urso-baloes img:first-child {
-    width: 250px; /* tamanho aumentado */
+    width: 250px;
     height: auto;
-    position: relative;  /* adicionado para poder mover */
-    left: 35px; /* move o urso 35px para a direita */
+    position: relative;
+    left: 35px;
 }
 
 .presente-decorativo {
     position: absolute;
-    bottom: 0;
+    bottom: 30px; /* Presente subiu também */
     right: 80px;
     width: 130px;
     height: auto;
@@ -187,7 +192,7 @@ body {
     .sugestao-presente { font-size: 9px; margin-top: 3px; }
     .urso-baloes img:first-child {
         width: 120px;
-        left: 15px; /* ajuste menor na responsividade */
+        left: 15px;
         position: relative;
     }
     .presente-decorativo { width: 60px; }
